@@ -1,0 +1,64 @@
+---
+output: rmarkdown::github_document
+---
+
+`mywx` : Tools to Query the 'MetMalaysia' Web Service 'API'
+
+The following functions are implemented:
+
+- `mywx_districts`:	Retrieve valid geopolitical entities (location)
+- `mywx_forecast`:	Retrieve forecast data for a location
+- `mywx_states`:	Retrieve valid geopolitical entities (location)
+- `mywx_touristdests`:	Retrieve valid geopolitical entities (location)
+- `mywx_towns`:	Retrieve valid geopolitical entities (location)
+
+### Installation
+
+```{r eval=FALSE}
+devtools::install_github("hrbrmstr/mywx")
+```
+
+```{r message=FALSE, warning=FALSE, error=FALSE, include=FALSE}
+options(width=120)
+```
+
+### Usage
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(mywx)
+library(tidyverse)
+
+# current verison
+packageVersion("mywx")
+
+mywx_districts()
+
+mywx_states()
+
+mywx_towns()
+
+mywx_touristdests()
+
+glimpse(mywx_forecast("LOCATION:237", "2017-08-13", "2017-08-13"))
+
+vals <- mywx_forecast("LOCATION:237", "2017-08-01", "2017-08-13")
+
+glimpse(vals)
+
+dplyr::filter(vals, datatype %in% c("FMINT", "FMAXT")) %>% 
+  mutate(value = as.numeric(value)) %>% 
+  ggplot(aes(date, value, color = datatype)) +
+  geom_line()
+```
+
+### Test Results
+
+```{r message=FALSE, warning=FALSE, error=FALSE}
+library(mywx)
+library(testthat)
+
+date()
+
+test_dir("tests/")
+```
+

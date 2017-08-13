@@ -1,0 +1,22 @@
+Package: mywx
+Type: Package
+Title: Tools to Query the 'MetMalaysia' Web Service 'API'
+Version: 0.1.0
+Date: 2017-08-12
+Author: Bob Rudis (bob@rud.is)
+Maintainer: Bob Rudis <bob@rud.is>
+Description: Tools to query the 'MetMalaysia' Web Service 'API'.
+URL: https://github.com/hrbrmstr/mywx
+BugReports: https://github.com/hrbrmstr/mywx/issues
+License: AGPL
+Suggests:
+    testthat,
+    covr
+Depends:
+    R (>= 3.2.0)
+Imports:
+    readr,
+    httr,
+    jsonlite,
+    tibble
+RoxygenNote: 6.0.1
