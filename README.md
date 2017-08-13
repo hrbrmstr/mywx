@@ -1,6 +1,16 @@
 
 `mywx` : Tools to Query the 'MetMalaysia' Web Service 'API'
 
+The Malaysian Meteorological Web Service API (Application Programming Interface) is a free service offered by Malaysian Meteorological Department to the general public. The service, which serves on top of HTTP, exposes endpoints with JSON response, a human readable yet programmatically parseable data exchange format.
+
+This package provides a small set of functions to retrive locations (as you need the id for a location to use it) and forecast info.
+
+I don't live in Malaysia or use this service at all but it was an easy API to wrap. If you'd like to own this, please just say the word. It needs some work, especially since the "forecast" data returned had no real concept of proper tidy data in mind.
+
+You need a valid token either passed in to `mywx_api_token` or stored in the `MYWX_TOKEN` environment variable, preferably in `~/.Renviron`.
+
+NOTE: Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
+
 The following functions are implemented:
 
 -   `mywx_districts`: Retrieve valid geopolitical entities (location)
@@ -166,7 +176,7 @@ library(testthat)
 date()
 ```
 
-    ## [1] "Sat Aug 12 23:20:14 2017"
+    ## [1] "Sat Aug 12 23:36:00 2017"
 
 ``` r
 test_dir("tests/")

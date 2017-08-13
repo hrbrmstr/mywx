@@ -25,12 +25,10 @@ This is a WIP. The data returned is in a sub-optimal format that requires conver
 some data frame column values to numeric to use.
 }
 \details{
-You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN},
-preferably in \code{~/.Renviron}.
+You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN}
+environment variable, preferably in \code{~/.Renviron}.
 }
 \examples{
 \dontrun{
-mywx_forecast("LOCATION:237", "2017-08-13", "2017-08-13")
-mywx_forecast("LOCATION:237", "2017-08-01", "2017-08-13")
 }
 }

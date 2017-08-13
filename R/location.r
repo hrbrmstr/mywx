@@ -23,11 +23,12 @@
 #' Endpoint data relies on passing a `locationid`. These functions can be uses to obtain
 #' a lookup table of valid loations and ids.
 #'
-#' You need a valid token either passed in to `mywx_api_token` or stored in the `MYWX_TOKEN`,
-#' preferably in `~/.Renviron`.
+#' You need a valid token either passed in to `mywx_api_token` or stored in the `MYWX_TOKEN`
+#' environment variable, preferably in `~/.Renviron`.
 #'
 #' @md
 #' @param mywx_api_token MET API token
+#' @note Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
 #' @export
 #' @examples \dontrun{
 #' mywx_states()

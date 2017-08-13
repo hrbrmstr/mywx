@@ -3,8 +3,8 @@
 #' This is a WIP. The data returned is in a sub-optimal format that requires conversion of
 #' some data frame column values to numeric to use.
 #'
-#' You need a valid token either passed in to `mywx_api_token` or stored in the `MYWX_TOKEN`,
-#' preferably in `~/.Renviron`.
+#' You need a valid token either passed in to `mywx_api_token` or stored in the `MYWX_TOKEN`
+#' environment variable, preferably in `~/.Renviron`.
 #'
 #' @md
 #' @param location_id valid location id retrieved from one of the location helpers
@@ -13,10 +13,11 @@
 #' @param dataset_id the current only valid default, `FORECAST`, is pre-populated
 #' @param data_category_id the current only valid default, `GENERAL` is pre-populated
 #' @param mywx_api_token MET API token
+#' @note Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
 #' @export
 #' @examples \dontrun{
-#' mywx_forecast("LOCATION:237", "2017-08-13", "2017-08-13")
-#' mywx_forecast("LOCATION:237", "2017-08-01", "2017-08-13")
+# mywx_forecast("LOCATION:237", "2017-08-13", "2017-08-13")
+# mywx_forecast("LOCATION:237", "2017-08-01", "2017-08-13")
 #' }
 mywx_forecast <- function(location_id, start_date = Sys.Date(), end_date = Sys.Date(),
                           dataset_id = "FORECAST", data_category_id = "GENERAL",

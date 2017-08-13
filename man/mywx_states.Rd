@@ -23,8 +23,8 @@ Endpoint data relies on passing a \code{locationid}. These functions can be uses
 a lookup table of valid loations and ids.
 }
 \details{
-You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN},
-preferably in \code{~/.Renviron}.
+You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN}
+environment variable, preferably in \code{~/.Renviron}.
 }
 \examples{
 \dontrun{
