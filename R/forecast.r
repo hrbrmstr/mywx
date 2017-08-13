@@ -14,6 +14,7 @@
 #' @param data_category_id the current only valid default, `GENERAL` is pre-populated
 #' @param mywx_api_token MET API token
 #' @note Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
+#' @references \url{https://api.met.gov.my/dashboard/docs}
 #' @export
 #' @examples \dontrun{
 # mywx_forecast("LOCATION:237", "2017-08-13", "2017-08-13")

@@ -26,6 +26,9 @@ a lookup table of valid loations and ids.
 You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN}
 environment variable, preferably in \code{~/.Renviron}.
 }
+\note{
+Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
+}
 \examples{
 \dontrun{
 mywx_states()
@@ -33,4 +36,7 @@ mywx_districts()
 mywx_towns()
 mywx_touristdests()
 }
+}
+\references{
+\url{https://api.met.gov.my/dashboard/docs}
 }

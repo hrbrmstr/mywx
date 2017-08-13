@@ -29,6 +29,7 @@
 #' @md
 #' @param mywx_api_token MET API token
 #' @note Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
+#' @references \url{https://api.met.gov.my/dashboard/docs}
 #' @export
 #' @examples \dontrun{
 #' mywx_states()

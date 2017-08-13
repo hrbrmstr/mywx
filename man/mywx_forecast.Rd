@@ -28,7 +28,13 @@ some data frame column values to numeric to use.
 You need a valid token either passed in to \code{mywx_api_token} or stored in the \code{MYWX_TOKEN}
 environment variable, preferably in \code{~/.Renviron}.
 }
+\note{
+Maximum burst requests is 10 per minute and maximum sustained requests is 1,000 per day.
+}
 \examples{
 \dontrun{
 }
+}
+\references{
+\url{https://api.met.gov.my/dashboard/docs}
 }
